@@ -111,18 +111,28 @@ Copy Repository URL
 Git Commands::
 
 >git clone <repo url>
+
 >git clone https://github.com/parasa7358/spring-petclinic.git
 >
+
 >![image](https://github.com/user-attachments/assets/e8b7464b-069e-43ed-b372-86ddd7a730c4)
+
 
 ![image](https://github.com/user-attachments/assets/0590c587-3511-4a80-9de1-52536ec90cef)
 
+
 >cd <reponame>
+
 >git checkout <branchname>
+
 >git status
+
 >git add --all
+
 >git status
+
 >git commit -m "commit message"
+
 >git push origin
 
 All Steps::
