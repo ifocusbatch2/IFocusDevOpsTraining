@@ -594,7 +594,6 @@ To github.com:parasa7358/spring-petclinic.git
 
 Jenkins is a free and open source automation server/tool. It helps automate the parts of software development related to building, testing, and deploying, facilitating continuous integration and continuous delivery.
 
-<img width="846" alt="jenkins overview" src="https://github.com/user-attachments/assets/ffb9a0c8-0a8c-4b43-953e-36cd17297716" />
 
 Jenkins is a Orchestration tool
 
@@ -604,6 +603,8 @@ Jenkins is a Schedular
 
 Jenkins is a crone job schedular 
 
+LLE/Pre-prod/UAT  ---automatically ---contunutineus deployemt
+LLE/Pre-prod/UAT  ---Manually ---contunutineus delivery
 
 Continuous Integration(CI)::the practice of automating the integration of code changes from multiple Developers into a single software project. It's a primary DevOps best practice, allowing developers to frequently merge code changes into a central repository,after which automated builds and tests are run automatically.
 
