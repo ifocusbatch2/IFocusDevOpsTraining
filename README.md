@@ -585,3 +585,174 @@ To github.com:parasa7358/spring-petclinic.git
 
 
    Please be practice above 3 users activity in real time bases 
+
+
+   19/03/2025::
+   ================
+
+   Jenkins Introductiion::
+
+Jenkins is a free and open source automation server/tool. It helps automate the parts of software development related to building, testing, and deploying, facilitating continuous integration and continuous delivery.
+
+<img width="846" alt="jenkins overview" src="https://github.com/user-attachments/assets/ffb9a0c8-0a8c-4b43-953e-36cd17297716" />
+
+Jenkins is a Orchestration tool
+
+Jenkins is a CI/CD tool
+
+Jenkins is a Schedular
+
+Jenkins is a crone job schedular 
+
+
+Continuous Integration(CI)::the practice of automating the integration of code changes from multiple Developers into a single software project. It's a primary DevOps best practice, allowing developers to frequently merge code changes into a central repository,after which automated builds and tests are run automatically.
+
+developers frequently commit to a shared repository using a version control system such as Git,A continuous integration automatically builds and runs unit tests on the new code changes to immediately using jenkins Orchestration.
+
+Continuous Delivery (CD)::Continuous Delivery is a software development practice in which code changes are automatically built, tested, and prepared for release to production in a consistent and reliable manner. The key distinction of continuous delivery is that the process of deploying the code to production is done manually by a human decision-maker.
+
+![image](https://github.com/user-attachments/assets/a3be0abd-12cf-49a5-b1e5-e56d54ac1080)
+
+
+
+Continuous Deployment(CD) :: Continuous Deployment is an extension of continuous delivery. With continuous deployment, every change that passes through the automated tests and builds is automatically deployed to production without any human intervention. The deployment process is fully automated.
+
+![image](https://github.com/user-attachments/assets/03cd5335-7656-4b39-80c3-e7ba7a0234a9)
+
+
+Roles And Responsibilities::
+
+1)The devops engineer was responsibility to release the product to the market as soon as possible
+2)release the product speed to the market
+3)Devops engineer was give continues feedback to the developers
+4) Devops engineer responsibility start from git and end with production
+
+A) when your activity start from git and end with production environment(production servers)Continues deployment
+when your activity start from git to LLE(lower level environment,testing environment,pre-prod…et) environment(pre-production servers)Continues delivery non-production environment
+
+Download JDK 17 ::
+
+https://www.oracle.com/java/technologies/javase/jdk17-archive-downloads.html
+
+Windows x64 Installer	153.92 MB	
+https://download.oracle.com/java/17/archive/jdk-17.0.12_windows-x64_bin.exe (sha256 )
+
+OR
+
+Windows x64 Compressed Archive	172.87 MB	
+https://download.oracle.com/java/17/archive/jdk-17.0.12_windows-x64_bin.zip (sha256 )
+
+Download Maven::
+
+https://maven.apache.org/download.cgi
+
+Source zip archive	apache-maven-3.9.9-src.zip
+
+
+====================
+
+JDK 17 Environment setup::
+
+Go to Search box & type Edit the system environemnt variables and click
+
+
+![image](https://github.com/user-attachments/assets/66f98991-dc2a-4bd5-a093-67b88997e851)
+
+It will navigate to System properties 
+
+![image](https://github.com/user-attachments/assets/2b14fcee-1b5d-4f00-ac6e-b0ee83932384)
+
+Open Environemnt Variables
+
+![image](https://github.com/user-attachments/assets/5c2b431e-caa8-4a64-86ed-71f379f57c7b)
+
+![image](https://github.com/user-attachments/assets/b3e2a06a-27ec-46a2-b1ac-8579c5be9321)
+
+
+User variables::
+JAVA_HOME=C:\Users\HP\Downloads\jdk-17.0.12_windows-x64_bin\jdk-17.0.12
+ 
+![image](https://github.com/user-attachments/assets/8ad54751-f25d-4a0c-9339-1e90caa81094)
+
+System variable::
+
+%JAVA_HOME%\bin
+%MAVEN_HOME%\bin
+ 
+![image](https://github.com/user-attachments/assets/00ace73f-2dad-442d-9404-7ade62e0ba70)
+
+![image](https://github.com/user-attachments/assets/14ea70d3-2d24-4f7d-a752-c412d4fb704d)
+
+
+Maven setup::
+MAVEN_HOME=C:\Users\HP\Downloads\apache-maven-3.9.9-bin\apache-maven-3.9.9
+
+![image](https://github.com/user-attachments/assets/8a0f15af-32c5-4624-af43-59959b02e8c8)
+
+Download link
+https://maven.apache.org/download.cgi
+
+
+Make sure we should setup the path at system variable 
+
+JAVA_HOME & MAVEN_HOME
+
+![image](https://github.com/user-attachments/assets/07ddf2ff-a7f1-470b-b07c-66316e8b1d7e)
+
+
+now verify the java version & maven version:: go to git bash and verify. below are refreenced screenshots
+
+> java -version
+
+![image](https://github.com/user-attachments/assets/4319ddcf-5a6a-4844-aa74-5e7e3b88d601)
+
+> mvn -v
+
+![image](https://github.com/user-attachments/assets/ff578d8a-5c15-4686-8fdf-d9c94240ee73)
+
+
+once above setup is ready then we will proceed to installe jenkins 
+
+================
+
+Installed jenkins in Windows::
+https://www.jenkins.io/download/
+
+Go to google search -->download jenkins war file for windows
+
+![image](https://github.com/user-attachments/assets/d5550fe2-9af0-4376-af1b-6d4056beafe8)
+
+Click --->WAR file link
+
+
+![image](https://github.com/user-attachments/assets/3504e05f-6c0d-47a8-9b51-dffbcd0f790f)
+
+Please follow the below link steps to installed jenkins in your windows machines
+
+https://www.jenkins.io/doc/book/installing/war-file/
+
+Steps::
+
+https://www.jenkins.io/download/
+1. First download the jenkins.war file and right click -->open gitbash here
+2. run the command  -->java -jar jenkins.war --httpPort=9090
+
+![image](https://github.com/user-attachments/assets/1cf75767-d6d7-4dfb-9a75-ccb9365b5ffb)
+
+Browse to http://localhost:9090 and wait until the Unlock Jenkins page appears
+
+Installed the default suggested plugins
+
+![image](https://github.com/user-attachments/assets/081c44fc-a6a3-46fa-82e3-7b34c2dc2dd6)
+
+click on continue 
+
+Need to create jenkins user profile 
+
+USER Name--->admin (any name you can provide)
+PASSWORD  -->admin  (any password as your wish but make sure you should remembered the these credentials)
+
+![image](https://github.com/user-attachments/assets/f0458a88-da81-4d32-9f87-42458fd214a1)
+
+
+
