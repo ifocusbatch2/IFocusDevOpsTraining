@@ -756,4 +756,136 @@ PASSWORD  -->admin  (any password as your wish but make sure you should remember
 ![image](https://github.com/user-attachments/assets/f0458a88-da81-4d32-9f87-42458fd214a1)
 
 
+20/03/2025::
+==============
+
+Create sample Freestyle project::
+============================
+
+Click New Item
+
+![image](https://github.com/user-attachments/assets/d9e7f707-aa00-4c74-b9ca-30489ded6f55)
+
+
+Configuration stages::
+
+1.General
+
+2.Source code management (SCM)
+
+3.Triggres
+
+4.Environment
+
+5.Build Steps
+
+6.Post Build Actions
+
+
+![image](https://github.com/user-attachments/assets/b7b5caf1-3d81-4de0-aebc-c2dc5080f916)
+
+
+General Section provide the Project/job description 
+
+
+At SCM stage level select the Git and provide the github details
+
+![image](https://github.com/user-attachments/assets/827c5b34-8a6e-41ad-b6e1-4899348730d6)
+
+Branches to build
+
+![image](https://github.com/user-attachments/assets/51cf678c-afbd-40bc-bbb5-fae55e4c5537)
+
+Poll SCM:: i want triggered the jenkins job build every minute
+
+![image](https://github.com/user-attachments/assets/7bab6e2d-7868-460e-bd42-b2697195f3fe)
+
+Build steps::select the Invoke top-level Maven targets
+Goals section
+>mvn clean install
+
+Maven goals::
+
+>mvn test
+
+>mvn install
+
+
+>mvn clean install
+
+
+>mvn clean
+
+
+>mvn package
+
+![image](https://github.com/user-attachments/assets/53d49170-9dfe-4cad-abc0-50bf268e96c7)
+
+
+Job will be created
+
+Click Build Now
+
+
+Buils is Inprogress
+
+![image](https://github.com/user-attachments/assets/c6e399ce-ac52-47de-94a3-b4d6d156dce5)
+
+
+Automatically Discard Old Builds:::
+==============================
+To automate the process of discarding old builds, you can configure the job’s settings to automatically delete old builds based on criteria such as the number of builds to keep or the age of the builds.
+
+Follow these steps:
+
+Open the Jenkins job (project).
+Click on Configure (on the left-hand side).
+Scroll down to the Build Discarder section (usually under the Build Triggers section).
+Check Discard old builds.
+Specify the following options:
+Max # of builds to keep: Set the maximum number of builds to keep.
+Max days to keep builds: Set the maximum age for builds to keep.
+Save the configuration by clicking Save.
+
+Poll SCM ::Jenkins server ask git if there is any changes in git server or not, if changes there Jenkins server build/package the changes , every change build happened like 5 mints ,means every 5 minutes verify the Jenkins server to git if there is any changes 
+
+![image](https://github.com/user-attachments/assets/6f436ad6-e92a-40e3-831a-23219c288217)
+
+POLL SCM ----* * * * * --every minute when every commit 
+
+Create one sample POLL SCM jenkins job::
+===========================================
+Go to jenkins Dashboard
+click New Item
+
+![image](https://github.com/user-attachments/assets/1c62657f-935b-4eed-b032-08842fb09a57)
+
+Description
+
+![image](https://github.com/user-attachments/assets/3a54ba69-b2aa-4443-ad9b-d18ab5fbde02)
+
+
+Provide the Git URL
+
+![image](https://github.com/user-attachments/assets/1fb7b83f-3bba-411b-aad9-a725f25d3e1c)
+
+
+Branch buiild
+
+![image](https://github.com/user-attachments/assets/71aec8f1-4783-4e97-97cb-232dd18811ae)
+
+POLL SCM:: * * * * *
+
+every minute build was trigger when new commits happend in github repository
+
+![image](https://github.com/user-attachments/assets/d6ab7a34-156a-4430-9d40-31e362ad23b1)
+
+
+Build Steps::
+
+![image](https://github.com/user-attachments/assets/4aae78af-d217-41de-a1e6-16bfe2e34472)
+
+
+Build Periodically:::	H/15 * * * *   ----this build happened every 5 minutes without commits ,if changes are commit or not but every 5 mints build happened in Jenkins 
+
 
